@@ -1,2 +1,2 @@
-# primeiro-repositorio
-Meu primeiro repositório criado para o desafio de projeto da Dio. Aqui estão alguns pseudocódigos feitos no curso de Pensamento computacional e Introdução a Programação.
+## Primeiro Repositório
+Repositório criado para o desafio de projeto da Dio. Decidi colocar os pseudocódigos feitos durante o curso de Pensamento Computacional e Introdução a Programação aqui. 
