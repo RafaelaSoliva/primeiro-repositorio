@@ -29,7 +29,7 @@ programa {
 	    	}
 	    	
 	    	faca {
-		        escreva("\nContinuar? \n1 - Continuar \n2 - Parar \nOpção (1/2): ")
+		        escreva("\nContinuar a execução? \n1 - Continuar \n2 - Parar \nOpção (1/2): ")
 		        leia (opcaoContinuar)
 		        escreva("\n")
 		    
