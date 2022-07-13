@@ -14,12 +14,12 @@ programa {
 		    
 		    
 		    faca {
-		    escreva("1 - Continuar \n2 - Parar \nContinuar?: ")
-		    leia (opcaoContinuar)
+		        escreva("1 - Continuar \n2 - Parar \nContinuar?: ")
+		        leia (opcaoContinuar)
 		    
 		    se (opcaoContinuar == 2) {
-		       continuar = falso
-		       opcaoContinuarInvalida = falso
+                continuar = falso
+                opcaoContinuarInvalida = falso
 		       
 		    } senao se (opcaoContinuar != 1) {
 		       opcaoContinuarInvalida = verdadeiro
