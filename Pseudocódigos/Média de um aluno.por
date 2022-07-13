@@ -21,24 +21,26 @@ programa {
 	    	escreva("A média do aluno foi: " + media)
 		
 	    	se(media>=6) {
-		        escreva("\nAluno aprovado!")
+		        escreva("\nAluno aprovado!\n")
 	    	}
 	    	senao {
-	    	    escreva("\nAluno reprovado.")
+	    	    escreva("\nAluno reprovado.\n")
 	    	}
 	    	
 	    	faca {
-                escreva("1 - Continuar \n2 - Parar \nContinuar?: ")
+		        escreva("1 - Continuar \n2 - Parar \nContinuar?: ")
 		        leia (opcaoContinuar)
 		    
-		    se (opcaoContinuar == 2) {
-                continuar = falso
-                opcaoContinuarInvalida = falso
-		       
-		    } senao se (opcaoContinuar != 1) {
-		       opcaoContinuarInvalida = verdadeiro
-		       escreva("Por favor, insira uma opção válida!\n")
-		    }
+                se (opcaoContinuar == 2) {
+                    continuar = falso
+                    opcaoContinuarInvalida = falso
+                } senao se (opcaoContinuar == 1) {
+                    continuar = verdadeiro
+                    opcaoContinuarInvalida = falso
+                } senao {
+                    opcaoContinuarInvalida = verdadeiro
+                    escreva("Por favor, insira uma opção válida!\n")
+		        }
 		    
 		    } enquanto (opcaoContinuarInvalida)
 	    	
