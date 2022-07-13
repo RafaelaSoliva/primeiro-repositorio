@@ -2,13 +2,33 @@
 
 programa {
 	funcao inicio() {
-		inteiro x, y
+		inteiro x, y, opcaoContinuar
+		logico continuar = verdadeiro, opcaoContinuarInvalida = falso
 		
-		escreva ("Digite os números para soma do intervalo: ")
-		leia(x)
-		leia(y)
-		
-		escreva(SomaIntervalo(x,y))
+		faca {
+		    escreva ("Digite os números para soma do intervalo: ")
+		    leia(x)
+		    escreva ("Digite os números para soma do intervalo: ")
+		    leia(y)
+		    escreva("Soma do intervalo: " + SomaIntervalo(x,y) + "\n")
+		    
+		    
+		    faca {
+		    escreva("1 - Continuar \n2 - Parar \nContinuar?: ")
+		    leia (opcaoContinuar)
+		    
+		    se (opcaoContinuar == 2) {
+		       continuar = falso
+		       opcaoContinuarInvalida = falso
+		       
+		    } senao se (opcaoContinuar != 1) {
+		       opcaoContinuarInvalida = verdadeiro
+		       escreva("Por favor, insira uma opção válida!\n")
+		    }
+		    
+		    } enquanto (opcaoContinuarInvalida)
+		    
+	    } enquanto (continuar)
 	}
 		
 		funcao inteiro SomaIntervalo (inteiro x, inteiro y) {
