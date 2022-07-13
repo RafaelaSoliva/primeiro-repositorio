@@ -2,30 +2,49 @@
 
 programa {
 	funcao inicio() {
-		inteiro operandoUm, operandoDois, operador, resultado = 0
-		logico resultadoValido = verdadeiro
+		inteiro operandoUm, operandoDois, operador, resultado = 0, opcaoContinuar
+		logico resultadoValido = verdadeiro, continuar = verdadeiro, opcaoContinuarInvalida = falso
 		
-		escreva("Insira o primeiro número: ")
-		leia(operandoUm)
-		escreva("Insira o segundo número: ")
-		leia(operandoDois)
-		escreva("Escolha a operação: \n1 - Soma \n2 - Subtração \n3 - Multiplicação \n4 - Divisão \nNúmero da operação: ")
-		leia(operador)
+		faca {
+		    escreva("Insira o primeiro número: ")
+	    	leia(operandoUm)
+	    	escreva("Insira o segundo número: ")
+	    	leia(operandoDois)
+	    	escreva("Escolha a operação: \n1 - Soma \n2 - Subtração \n3 - Multiplicação \n4 - Divisão \nNúmero da operação: ")
+	    	leia(operador)
 		
-		escolha(operador){
-		    caso 1: resultado = operandoUm + operandoDois pare
-		    caso 2: resultado = operandoUm - operandoDois pare
-		    caso 3: resultado = operandoUm * operandoDois pare
-		    caso 4: resultado = operandoUm / operandoDois pare
-		    caso contrario: resultadoValido = falso
-		}
+	    	escolha (operador) {
+		        caso 1: resultado = operandoUm + operandoDois pare
+		        caso 2: resultado = operandoUm - operandoDois pare
+		        caso 3: resultado = operandoUm * operandoDois pare
+                caso 4: resultado = operandoUm / operandoDois pare
+		        caso contrario: resultadoValido = falso
+	    	}
 		
-		se(resultadoValido){
-		    escreva("Resultado = " + resultado)
-		}
-		senao{
-		    escreva("Número da operação inválido")
-		}
-		
+		    se (resultadoValido) {
+		        escreva("Resultado = " + resultado + "\n")
+	    	}
+	    	senao {
+	    	    escreva("Número da operação inválido!\n")
+	    	}
+	    	
+	    	faca {
+		        escreva("1 - Continuar \n2 - Parar \nContinuar?: ")
+		        leia (opcaoContinuar)
+		    
+                se (opcaoContinuar == 2) {
+                    continuar = falso
+                    opcaoContinuarInvalida = falso
+                } senao se (opcaoContinuar == 1) {
+                    continuar = verdadeiro
+                    opcaoContinuarInvalida = falso
+                } senao {
+                    opcaoContinuarInvalida = verdadeiro
+                    escreva("Por favor, insira uma opção válida!\n")
+		        }
+		    
+		    } enquanto (opcaoContinuarInvalida)
+	    	
+		} enquanto (continuar)
 	}
 }
