@@ -29,8 +29,9 @@ programa {
 	    	}
 	    	
 	    	faca {
-		        escreva("1 - Continuar \n2 - Parar \nContinuar?: ")
+		        escreva("\nContinuar? \n1 - Continuar \n2 - Parar \nOpção (1/2): ")
 		        leia (opcaoContinuar)
+		        escreva("\n")
 		    
                 se (opcaoContinuar == 2) {
                     continuar = falso
